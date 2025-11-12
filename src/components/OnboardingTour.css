@@ -1,0 +1,118 @@
+/* Intro.js mobile iOS fixes and RTL styling */
+
+/* Base tooltip styling */
+.introjs-tooltip {
+ 
+}
+
+.introjs-tooltiptext {
+
+}
+
+/* Button styling */
+.introjs-button {
+
+}
+
+.introjs-button.introjs-nextbutton {
+  background: #14D3C9 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.introjs-button.introjs-prevbutton {
+  background: #666 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.introjs-button.introjs-skipbutton {
+  background: #999 !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* Overlay styling */
+.introjs-overlay {
+}
+
+.introjs-helperLayer {
+
+}
+
+/* Mobile iOS specific fixes */
+@media screen and (max-width: 768px) {
+  .introjs-tooltip {
+
+  }
+  
+  /* Force tooltips to stay within viewport on mobile */
+  .introjs-tooltip.introjs-tooltip-top {
+
+  }
+  
+  .introjs-tooltip.introjs-tooltip-bottom {
+
+  }
+  
+  .introjs-tooltip.introjs-tooltip-left {
+   
+  }
+  
+  .introjs-tooltip.introjs-tooltip-right {
+
+  }
+  
+  /* Ensure tooltips don't get cut off on small screens */
+  .introjs-tooltip.introjs-tooltip-left,
+  .introjs-tooltip.introjs-tooltip-right {
+  }
+}
+
+/* RTL specific adjustments */
+.introjs-tooltip {
+}
+
+.introjs-tooltip .introjs-tooltiptext {
+  direction: rtl !important;
+  text-align: center !important;
+}
+
+/* Floating tooltip positioning */
+.introjs-floating {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 999999 !important;
+}
+
+/* Remove fade/transition animations for instant display */
+.introjs-overlay,
+.introjs-helperLayer,
+.introjs-tooltip,
+.introjs-tooltipReferenceLayer {
+  transition: none !important;
+  animation: none !important;
+}
+
+.introjs-overlay {
+  opacity: 1 !important;
+}
+
+.introjs-tooltip,
+.introjs-helperLayer {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Ensure tooltips are always visible on mobile */
+@media screen and (max-width: 768px) {
+  .introjs-tooltip {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    min-width: 150px !important;
+    max-width: 200px !important;
+  }
+}
