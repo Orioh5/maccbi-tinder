@@ -1,21 +1,21 @@
 /* Intro.js mobile iOS fixes and RTL styling */
 
 /* Base tooltip styling */
-.introjs-tooltip {
+/* .introjs-tooltip {
  
 }
 
 .introjs-tooltiptext {
 
-}
+} */
 
 /* Button styling */
-.introjs-button {
+/* .introjs-button {
 
-}
+} */
 
 .introjs-button.introjs-nextbutton {
-  background: #14D3C9 !important;
+  background: #2268AC !important;
   color: white !important;
   border: none !important;
 }
@@ -33,21 +33,21 @@
 }
 
 /* Overlay styling */
-.introjs-overlay {
+/* .introjs-overlay {
 }
 
 .introjs-helperLayer {
 
-}
+} */
 
 /* Mobile iOS specific fixes */
 @media screen and (max-width: 768px) {
-  .introjs-tooltip {
+  /* .introjs-tooltip {
 
-  }
+  } */
   
   /* Force tooltips to stay within viewport on mobile */
-  .introjs-tooltip.introjs-tooltip-top {
+  /* .introjs-tooltip.introjs-tooltip-top {
 
   }
   
@@ -61,17 +61,17 @@
   
   .introjs-tooltip.introjs-tooltip-right {
 
-  }
+  } */
   
   /* Ensure tooltips don't get cut off on small screens */
-  .introjs-tooltip.introjs-tooltip-left,
+  /* .introjs-tooltip.introjs-tooltip-left,
   .introjs-tooltip.introjs-tooltip-right {
-  }
+  } */
 }
 
 /* RTL specific adjustments */
-.introjs-tooltip {
-}
+/* .introjs-tooltip {
+} */
 
 .introjs-tooltip .introjs-tooltiptext {
   direction: rtl !important;

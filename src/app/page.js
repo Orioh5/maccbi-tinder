@@ -127,7 +127,7 @@ const db = [
     prize: "./partner/6.png",
     coupon: "COUPONCODE",
     topText: "ג'קט ZNE ADIDAS  לבן נשים",
-    cardText: "ג'קט ללא כובע גזרת נשים בצבע לבן עם הכיתוב 'MACCABI' בעיצוב כוכבים.",
+    cardText: "ג'קט ללא כובע עם הכיתוב 'MACCABI' בעיצוב כוכבים.",
     productUrl: "https://shop.maccabi.co.il/product/adidas-jacketzne-white-w/",
     upStashTable: 'ADIDAS 2025-26',
     oldPrice: 350,
@@ -139,7 +139,7 @@ const db = [
     prize: "./partner/5.png",
     coupon: "COUPONCODE",
     topText: "סווטשירט ZNE ADIDAS שחור בוגרים ",
-    cardText: "סווטשירט ללא כובע לבוגרים בצבע שחור עם הכיתוב 'MACCABI BASKETBALL'",
+    cardText: "סווטשירט עם הכיתוב 'MACCABI BASKETBALL'",
     productUrl: "https://shop.maccabi.co.il/product/adidas-sweatshirtzne-black/",
     upStashTable: 'ADIDAS 2025-26',
     oldPrice: 400,
@@ -150,8 +150,8 @@ const db = [
     url: "./partner2/4.png",
     prize: "./partner/4.png",
     coupon: "COUPONCODE",
-    topText: "ג'קט ZNE ADIDAS אפור ילדים",
-    cardText: "ג'קט עם רוכסן לילדים בצבע אפור עם לוגו הקבוצה.",
+    topText: "ג'קט ZNE ADIDAS אפור",
+    cardText: "ג'קט עם רוכסן לילדים עם לוגו הקבוצה.",
     productUrl: "https://shop.maccabi.co.il/product/adidas-kids-jacketzne-grey/",
     upStashTable: 'ADIDAS 2025-26',
     oldPrice: 350,
@@ -162,7 +162,7 @@ const db = [
     url: "./partner2/1.png",
     prize: "./partner/1.png",
     coupon: "COUPONCODE",
-    topText: "קפוצ'ון ADIDAS כותנה כחול אפרפר בוגרים",
+    topText: "קפוצ'ון ADIDAS",
     cardText: "קפוצ'ון מכותנה לבוגרים בצבע כחול אפרפר.",
     productUrl: "https://shop.maccabi.co.il/product/adidas-hoodie-bluegrey/",
     upStashTable: 'ADIDAS 2025-26',
@@ -174,7 +174,7 @@ const db = [
     url: "./partner2/2.png",
     prize: "./partner/2.png",
     coupon: "COUPONCODE",
-    topText: "ג'קט ADIDAS כותנה שחור בוגרים",
+    topText: "ג'קט ADIDAS",
     cardText: "ג'קט עם רוכסן מכותנה לבוגרים בצבע שחור.",
     productUrl: "https://shop.maccabi.co.il/product/adidas-jacket-black/",
     upStashTable: 'ADIDAS 2025-26',
@@ -186,8 +186,8 @@ const db = [
     url: "./partner2/3.png",
     prize: "./partner/3.png",
     coupon: "COUPONCODE",
-    topText: "ג'קט ZNE ADIDAS סנד בוגרים",
-    cardText: "ג'קט עם רוכסן לבוגרים בצבע בז'-סנד עם לוגו הקבוצה",
+    topText: "ג'קט ZNE ADIDAS סנד",
+    cardText: "ג'קט עם רוכסן לבוגרים עם לוגו הקבוצה",
     productUrl: "https://shop.maccabi.co.il/product/adidas-jacketzne-sand/",
     upStashTable: 'ADIDAS 2025-26',
     oldPrice: 500,
@@ -644,6 +644,7 @@ export default function Home() {
                                // On other devices, scale to 80% (20% smaller)
                                transform: isIosUserAgent() ? "scale(0.6667)" : "scale(0.75)",
                                transformOrigin: "center center",
+                               marginTop: "-5px",
                              }}
                            />
                          </div>
@@ -673,13 +674,13 @@ export default function Home() {
                   )
               )}
             </div>
-            <div className="fixed bottom-0 left-0 right-0 flex flex-col items-center z-10">
+            <div className="fixed bottom-3 left-0 right-0 flex flex-col items-center z-10">
               <p
                 className="text-black text-lg font-bold ios-shift-down"
               >
                 החליקו ובחרו על איזה מוצר תרצו לקבל
               </p>
-              <div className="bg-[#14D3C9] px-8 pb-4 pt-2 rounded-lg">
+              <div className="bg-[#2268AC] px-8 pb-4 pt-2 rounded-lg">
                 <p
                   className="text-white text-6xl font-bold bottomBannerText"
                   style={{
@@ -688,7 +689,7 @@ export default function Home() {
                     transformOrigin: 'center center',
                   }}
                 >
-                  ₪100 הנחה
+                  30% הנחה
                 </p>
               </div>
             </div>
@@ -770,7 +771,7 @@ const MatchScreen = ({ currentIndex, showConfetti, productUrl, couponCode, winni
           {/* Дополнительный текст над карточкой */}
           <div className="text-center mb-2" style={{ marginTop: '3%' }}>
             <p className="text-black text-lg font-bold mb-0">איזה כיף! קיבלתם מאיתנו</p>
-            <p className="text-black text-5xl font-bold mb-0" style={{ textShadow: '2px 2px 0px #14D3C9' }}>₪100 הנחה</p>
+            <p className="text-black text-5xl font-bold mb-0" >30% הנחה</p>
             {/* {currentTopText && (
               <p className="text-black text-xl font-bold">{currentTopText}</p>
             )} */}
@@ -779,7 +780,7 @@ const MatchScreen = ({ currentIndex, showConfetti, productUrl, couponCode, winni
           {/* Coupon Code Display */}
           {couponCode && (
             <div className="text-center mb-3" style={{ marginTop: '12px' }}>
-              <p className="text-black text-lg font-bold mb-1.5">קוד קופון לאתר פרטנר:</p>
+              <p className="text-black text-lg font-bold mb-1.5">קוד קופון לאתר מכבי תל אביב:</p>
               <div className="bg-gradient-to-r from-[#14D3C9] to-[#0ea5e9] text-white px-6 py-2.5 rounded-lg mb-1.5 shadow-lg border-2 border-dashed border-white">
                 <p className="text-2xl font-bold">{couponCode}</p>
               </div>
@@ -813,7 +814,7 @@ const MatchScreen = ({ currentIndex, showConfetti, productUrl, couponCode, winni
               className={`text-white px-7 py-2.5 rounded-lg font-bold text-lg transition-all ${
                 isLoading 
                   ? 'loading-button' 
-                  : 'bg-[#14D3C9] hover:bg-[#12c0b8]'
+                  : 'bg-[#2268AC] hover:bg-[#2268AC]'
               }`}
               disabled={isLoading}
               onClick={() => {

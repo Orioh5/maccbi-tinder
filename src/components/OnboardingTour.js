@@ -91,7 +91,7 @@ const OnboardingTour = ({
             {
               // New welcome step at the beginning
               position: "floating",
-              intro: withFrame("ברוכים הבאים למשחק ההטבות של פרטנר<br/>בחרו על איזה מוצר תרצו לקבל 100 ש\"ח הנחה"),
+              intro: withFrame("ברוכים הבאים למשחק ההטבות של מכבי תל אביב<br/>בחרו על איזה מוצר תרצו לקבל 30 \ % הנחה"),
             },
             {
               element: ".swipeButtons.swipeLeft",
